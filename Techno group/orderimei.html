@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="login/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/orderimei.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar-expand-lg navbar-xl p-lg-0 d-flex justify-content-between align-items-center">
+                <div class="d-flex">
+                    <a class="logo navbar-brand" href="#"><img src="assets/images/logo/logo-no-background.png"></a>
+                </div>
+                <div class="d-none d-lg-block">
+                    <ul class="navbar-nav navbar-mastermenu ml-auto">
+                        <li class="nav-item menu-item-1007">
+                            <a class="nav-link" href="orderimei.html">
+                                IMEI ORDER
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item-1007">
+                            <a class="nav-link" href="history.html">
+                                ORDER HISTORY
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item-1120">
+                            <a class="nav-link" target="_blank" href="https://t.me/rsmrimei">
+                                TELEGRAM
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item-1015">
+                            <a class="nav-link" href="./register">
+                                REGISTRATION
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="d-flex align-items-center pl-3">
+                                <a class="nav-link btn p-2 px-3 bg-secondary" data-keyboard="true" data-toggle="modal"
+                                    data-target="#login" href="login.html">
+                                    <span class="lg-icon">
+                                        <i class='fa fa-lock' style='color: red'></i>
+                                    </span> Login
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="h-100 d-flex flex-column">
+            <div class="card">
+                <input type="hidden" id="service-id" name="id" value="4462bf0ddbe0d0da40e1e828ebebeb11">
+                <input type="hidden" id="service-name" name="servicename">
+                <div id="serviceDetails2" class="position-relative h-100 d-flex flex-column">
+
+                    <script>
+                        $(document).ready(function() {
+                            var qntRange = {
+                                // Define your quantity ranges and prices here
+                                '1': 100,
+                                '2': 200,
+                                '3': 300,
+                                '4': 400,
+                                '5': 500
+                            };
+                    
+                            $('#qnt').on('input', function() {
+                                var quantity = parseInt($(this).val());
+                                var totalPrice = qntRange[quantity] || 0;
+                                $('#ctotal').text(totalPrice.toFixed(2));
+                            });
+                        });
+                    </script>
+                    <script>
+                        $(document).ready(function () {
+                            var maxo = parseInt(parseFloat($('#ccredit').text()) / parseFloat(Math.round($('#ocredit').text() * 100) / 100).toString());
+                            if (!maxo) {
+                                maxo = 0;
+                            }
+                            $('#maxo').text('You can order max. ' + maxo + ' of IMEI service');
+
+                            function setprogressbar() {
+                                var balance = parseInt($('#ccredit').text());
+                                var credit = parseInt($('#ctotal').text());
+
+                                var percentage = parseInt((credit * 100) / balance);
+                                var template = '<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="' + percentage + '" style="width: ' + percentage + '%" aria-valuemin="0" aria-valuemax="100"></div>';
+                                $('#progress').html(template);
+                            }
+
+                            var qntrange = '';
+                            var keys = Object.keys(qntrange);
+                            $('#qnt').keyup(function () {
+                                cntr2(this.value);
+                            });
+                            $('#qnt').change(function () {
+                                cntr2(this.value);
+                            });
+
+                            function cntr2(value) {
+                                if (qntrange) {
+                                    var firnalprice = qntrange[0].price;
+                                    for (var i = 0; i < keys.length; i++) {
+                                        if (qntrange[keys[i]].end !== '') {
+                                            if ((parseInt(value) > parseInt(qntrange[keys[i]].start) && parseInt(value) < parseInt(qntrange[keys[i]].end)) || parseInt(value) === parseInt(qntrange[keys[i]].start) || parseInt(value) === parseInt(qntrange[keys[i]].end)) {
+                                                firnalprice = qntrange[keys[i]].price;
+                                            }
+                                        }
+                                    }
+                                } else {
+                                    var firnalprice =100;
+                                }
+                                if ($('#qnt').val()) {
+                                    $('#ctotal').text(parseFloat(firnalprice * parseInt($('#qnt').val())).toFixed(2));
+                                } else {
+                                    $('#ctotal').text(parseFloat(firnalprice).toFixed(2));
+                                }
+                            }
+
+                            function afterplaceorder(data) {
+                                if (data[3]) {
+                                    let reply = JSON.parse(atob(data[3]));
+                                    console.log(reply);
+                                    let r;
+                                    var html = '<table class="table mt-4 table-striped"><thead><tr><th>Status</th><th>IMEI</th><th>Reply</th></tr></thead>';
+                                    for (r in reply) {
+                                        html += '<tr><td>' + reply[r].status + '</td> <td>' + reply[r].imei + '</td> <td>' + reply[r].info + '</td>  </tr>';
+                                    }
+                                    html += '<table>';
+                                    $('#replyjson').html(html);
+
+                                    $('#successmsg').removeClass('d-none');
+                                    $('#successmsg').addClass('d-block');
+                                    $('#formFields').addClass('d-none');
+                                } else {
+                                    $('#errormsg').removeClass('d-none');
+                                    $('#errormsg').addClass('d-block');
+                                }
+                            }
+
+                            // Order button click event
+                            $('#orderBtn').click(function () {
+                                var orderQuantity = parseInt($('#qnt').val());
+                                var orderPrice = 100; // Price per order ($100)
+
+                                if (orderQuantity) {
+                                    var totalAmount = parseFloat($('#ctotal').text());
+                                    totalAmount += orderQuantity * orderPrice; // Increment total amount by adding $100 per order
+
+                                    $('#ctotal').text(totalAmount.toFixed(2));
+
+                                    // Update progress bar
+                                    setprogressbar();
+                                }
+                            });
+                        });
+                    </script>
+
+
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="m-0">IMEI Service</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="qnt">Количество</label>
+                                    <input type="number" class="form-control" id="qnt" name="qnt" min="1" max="100"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="ctotal">Общая Сумма</label>
+                                    <input type="text" class="form-control" id="ctotal" name="ctotal" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="imei">IMEI</label>
+                                    <textarea class="form-control" id="imei" name="imei" rows="5" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="successmsg" class="alert alert-success d-none">
+                                    <strong>Success:</strong> Order placed successfully.
+                                </div>
+                                <div id="errormsg" class="alert alert-danger d-none">
+                                    <strong>Error:</strong> Order placement failed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h4>Contact Us</h4>
+                    <p>123 Street, City, Country</p>
+                    <p>Phone: +1 234 567890</p>
+                    <p>Email: info@example.com</p>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h4>About Us</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod eros at gravida
+                        fringilla. Sed id
+                        tincidunt libero, eget feugiat tortor.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2023 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

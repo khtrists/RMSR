@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="login/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="login/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/fontawesome.min.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar-expand-lg navbar-xl p-lg-0 d-flex justify-content-between align-items-center">
+                <div class="d-flex">
+                    <a class="logo navbar-brand" href="#"><img src="assets/images/logo/logo-no-background.png"></a>
+                </div>
+                <div class="d-none d-lg-block">
+                    <ul class="navbar-nav navbar-mastermenu ml-auto">
+                        <li class="nav-item menu-item-1007">
+                            <a class="nav-link" href="orderimei.html">
+                                IMEI ORDER
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item-1007">
+                            <a class="nav-link" href="history.html">
+                                ORDER HISTORY
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item-1120">
+                            <a class="nav-link" target="_blank" href="https://t.me/rsmrimei">
+                                TELEGRAM
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item-1015">
+                            <a class="nav-link" href="registration.html">
+                                REGISTRATION
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="d-flex align-items-center pl-3">
+                                <a class="nav-link btn p-2 px-3 bg-secondary" data-keyboard="true" data-toggle="modal"
+                                    data-target="#login" href="login.html">
+                                    <span class="lg-icon">
+                                        <i class='fa fa-lock' style='color: red'></i>
+                                    </span> Login
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <div class="page-container">
+                <div>
+                    <div class="alert alert1 alert-info">
+                        Two-factor authentication is disabled. Protect your account by enabling two-factor
+                        authentication.
+                        <a href="./settings/action/logins/towstep/true?standalone=true" data-toggle="modal"
+                            data-whatever="Two-step verification" data-target="#modal-ajax">Enable</a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8 mb-4 bottom-space">
+                            <div class="row curanbal">
+                                <div class="col-md-6 col-left">
+                                    <div class="cardone card h-100">
+                                        <div class="text-muted">
+                                            Your current balance
+                                        </div>
+                                        <div class="d-row ">
+                                            <h4 class="nowrap big-font">
+                                                <span class="aftercounter" style="opacity: 1;"></span>
+                                                <span class="counter" data-count="34.82">0</span>
+                                                <span class="text-sm aftercounter" style="opacity: 1;">$</span>
+                                            </h4>
+                                            <div class="aftercounter" style="opacity: 1;">
+                                                <button class="btn btn-primary btn-sm" type="button"
+                                                    onclick="window.location.href='payment.html'">
+                                                    <svg style="height: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z"/></svg>
+                                                     &nbsp; Buy Credits
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-right">
+                                    <div class="cardonedol card card-unpaid-balance h-100">
+                                        <div class="aftercounter" style="opacity: 1;">
+                                            <div class="cursor-pointer"
+                                                href="./settings/action/invoice/view/pending/limit/20?standalone=true"
+                                                data-whatever="Unpaid Balance" data-toggle="modal"
+                                                data-target="#modal-ajax">
+                                                <div class="text-muted">Unpaid Balance</div>
+                                                <h4 class="cardone big-font text-danger no-wrap">0 $</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                            
+                                  
+                              
+
+                            <div class="card card-othercredit my-4 ">
+                                <div id="othercredit" class="aftercounter text-center" style="opacity: 1;">
+                                    <div class="row">
+                                        <div class="d-grid mb-4 mb-lg-0">
+                                            <div>
+                                                <div class="card-body">
+                                                    <div class="text-center rounded-circle">
+
+                                                        <svg style="height: 35px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H512c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H512c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm96 64a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm104 0c0-13.3 10.7-24 24-24H448c13.3 0 24 10.7 24 24s-10.7 24-24 24H224c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24H448c13.3 0 24 10.7 24 24s-10.7 24-24 24H224c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24H448c13.3 0 24 10.7 24 24s-10.7 24-24 24H224c-13.3 0-24-10.7-24-24zm-72-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM96 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+                                                    </div>
+                                                    <div class="text-muted p-2">Total Revenue</div>
+                                                    <h4 class="nowrap">
+                                                        <span class="">0</span>
+                                                        <span class="text-sm">$</span>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-grid  mb-4 mb-lg-0">
+                                            <div>
+                                                <div class="card-body">
+                                                    <div class="text-center rounded-circle">
+                                                        <svg style="height: 35px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+                                                    </div>
+                                                    <div class="text-muted p-2">Closed Quantity</div>
+                                                    <h4 class="nowrap">
+                                                        <span class="">0</span>
+                                                        <span class="text-sm">$</span>
+                                                    </h4>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row nijepanel">
+                                <div class="col-lg-4 col-order-area mb-4 bottom-space">
+                                    <div class="card text-center card-area-status card-order-success h-100">
+                                        <div class="cursor-pointer rounded"
+                                            onclick="window.location.href='./orders/action/imei/status/available'">
+                                            <h2 class="h2">0
+                                                <span class="text-muted" style="font-weight: 100;font-size: 1.3rem">/
+                                                    0 </span>
+                                            </h2>
+                                        </div>
+                                        <div class="py-3">
+                                            <div class="w-100 rounded bg-light position-relative">
+                                                <div class="bg-success progressbar rounded"
+                                                    style="width: 95.865237366003%;height:3px"></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-muted p-2">Orders processed successfully</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-order-area mb-4 bottom-space">
+                                    <div class="card text-center card-area-status card-order-process h-100">
+                                        <div class="cursor-pointer rounded"
+                                            onclick="window.location.href='./orders/action/imei/status/pending'">
+                                            <h2 class="h2">0
+                                                <span class="text-muted" style="font-weight: 100;font-size: 1.3rem">/
+                                                    0 </span>
+                                            </h2>
+                                        </div>
+                                        <div class="py-3">
+                                            <div class="w-100 rounded bg-light position-relative">
+                                                <div class="bg-info progressbar rounded"
+                                                    style="width: 0.1531393568147%;height:3px"></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-muted p-2">Orders in process</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-order-area mb-4 bottom-space">
+                                    <div class="card text-center card-area-status card-order-fail h-100">
+                                        <div class="cursor-pointer rounded"
+                                            onclick="window.location.href='./orders/action/imei/status/rejected'">
+                                            <h2 class="h2">0
+                                                <span class="text-muted" style="font-weight: 100;font-size: 1.3rem">/
+                                                    0 </span>
+                                            </h2>
+                                        </div>
+                                        <div class="py-3">
+                                            <div class="w-100 rounded bg-light position-relative">
+                                                <div class="bg-danger progressbar rounded"
+                                                    style="width: 3.9816232771822%;height:3px"></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-muted p-2">Order process failure</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 order-md-2">
+                    <h4>Contact Us</h4>
+                    <p>England,London</p>
+                    <p>Phone: +905013043264</p>
+                    <p>Email: rsmrimei@gmail.com</p>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h4>About Us</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod eros at gravida
+                        fringilla. Sed id
+                        tincidunt libero, eget feugiat tortor.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2023 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Alert styles */
+ /* Alert styles */
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+  
+  .alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  /* Page container styles */
+  .page-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  /* Balance card styles */
+ /* Card styles */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+  
+  .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+  }
+
+  .cardone{
+    align-items: center;
+  }
+
+  .cardonedol{
+    text-align: center;
+  }
+  
+  .card-unpaid-balance {
+    border-color: #f8d7da;
+  }
+  .text-muted {
+    color: #6c757d;
+  }
+  
+  .d-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nowrap {
+    white-space: nowrap;
+  }
+  
+  .big-font {
+    font-size: 24px;
+  }
+  
+  .counter {
+    font-weight: bold;
+    animation: countUp 1s ease-in-out;
+  }
+  
+  @keyframes countUp {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0069d9;
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+
+  /* Unpaid balance card styles */
+  .card-unpaid-balance {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+  }
+  
+  /* Other credit styles */
+  .card-othercredit {
+    margin-bottom: 20px;
+  }
+  
+  #othercredit .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .rounded-circle {
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .fa-receipt,
+  .fa-lock {
+    color: #007bff;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Order area status styles */
+  .card-area-status {
+    border: none;
+    padding: 20px;
+  }
+  
+  .card-order-success {
+    background-color: #d4edda;
+  }
+  
+  .card-order-process {
+    background-color: #cce5ff;
+  }
+  
+  .card-order-fail {
+    background-color: #f8d7da;
+  }
+  
+  .py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .progressbar {
+    height: 3px;
+    background-color: #0d6efd;
+    animation: progressbar 1s linear;
+  }
+  
+  .bg-success {
+    background-color: #28a745 !important;
+  }
+  
+  .bg-info {
+    background-color: #17a2b8 !important;
+  }
+  
+  .bg-danger {
+    background-color: #dc3545 !important;
+  }
+  
+  /* Miscellaneous styles */
+  .text-muted {
+    color: #6c757d;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  /* Row styles */
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  /* Column styles */
+  .col-lg-8,
+  .col-lg-4 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .bottom-space {
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive column styles */
+  @media (min-width: 992px) {
+    .col-lg-8 {
+      flex: 0 0 66.666667%;
+      max-width: 66.666667%;
+    }
+    .col-lg-4 {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+  }
+  
+  /* Link styles */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+  }
+  
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+  }
+  
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+  }
+  
+  .modal-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+    overflow: auto;
+  }
+  
+  /* Icon styles */
+  .fas,
+  .fal {
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .fa-2x {
+    font-size: 2rem;
+  }
+  
+  /* Custom styles */
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  /* Progress bar animation */
+  @keyframes progressbar {
+    0% {
+      width: 0;
+    }
+  }
+  
+  /* Media queries */
+  @media (max-width: 767px) {
+    .col-left,
+    .col-right {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+
+  .page-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .no-wrap {
+    white-space: nowrap;
+  }
+  
+  .aftercounter {
+    opacity: 1;
+    margin-right: 70px;
+  }
+
+/* Balance card styles */
+.curanbal .card {
+    height: 100%;
+  }
+  
+  .curanbal .card .text-muted {
+    margin-bottom: 0.5rem;
+  }
+  
+  .curanbal .card .d-row {
+    display: flex;
+    align-items: center;
+  }
